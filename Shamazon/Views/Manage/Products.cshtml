@@ -1,0 +1,40 @@
+﻿<!-- /Manage/Products -->
+
+@model IEnumerable<Shamazon.Models.Product>
+
+@{
+    /**/
+
+    ViewBag.Title = "Manage Products";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (!Model.Any())
+{
+    <p>No listings available!</p>
+}
+else
+{
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <a href="AddProduct"><div class="col-sm-6 card text-center">Add a new product!</div></a>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <p>Your products</p>
+    <table class="table table-hover">
+        @foreach (var product in Model)
+        {
+            <tr>
+                <th class="col-md-3">@Html.ActionLink(product.Name, "EditProduct", new { id = product.Id })</th>
+                <th class="col-md-3">@product.CurrentPrice</th>
+                <th class="col-md-3">Rating: @product.Rating</th>
+            </tr>
+        }
+    </table>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
