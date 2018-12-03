@@ -26,5 +26,20 @@ namespace Shamazon.Controllers
 
             return View();
         }
+
+        public ActionResult Checkout()
+        {
+            ViewBag.Message = "Your checkout page.";
+
+            return View();
+        }
+
+        public ActionResult Cart()
+        {
+            ViewBag.Message = "Your cart.";
+
+            return View();
+        }
+
     }
 }
