@@ -279,7 +279,10 @@
     <Content Include="Content\bootstrap-sandstone.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\christmas.jpg" />
+    <Content Include="Content\headphones.jpg" />
     <Content Include="Content\image.svg" />
+    <Content Include="Content\pokemon.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
