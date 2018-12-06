@@ -1,0 +1,27 @@
+﻿<!-- /Shop/Product/{id} -->
+
+@model Shamazon.Models.Product
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<div class="card-group">
+    <div class="card">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+     </div>
+</div>
+        <ul>
+            <li>Current Price: @Model.CurrentPrice</li>
+            <li>Original Price: @Model.OriginalPrice</li>
+            <li>Rating: @Model.Rating</li>
+        </ul>
+

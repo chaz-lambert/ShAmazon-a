@@ -139,7 +139,7 @@ namespace Shamazon.Controllers
                 return RedirectToAction("Index");
             return View();
         }
-        
+
         //
         // POST: /Manage/AddProduct
         [HttpPost]

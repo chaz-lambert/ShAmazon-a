@@ -1,0 +1,40 @@
+﻿<!-- /Shop -->
+
+@model IEnumerable<Shamazon.Models.Product>
+
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Shop</h2>
+@if (!Model.Any())
+{
+    <p>No listings available!</p>
+}
+else
+{
+    foreach (var product in Model)
+    {
+    <a href="/Shop/Product/@product.Id">
+        <div class="row well">
+            <div class="col-xs-3">@product.Name</div>
+            <div class="col-xs-3">By @product.SellerName</div>
+            @if (product.OriginalPrice != 0 && product.CurrentPrice < product.OriginalPrice)
+            {
+                <div class="col-xs-3">
+                    <p>$@product.CurrentPrice</p>
+                    <p class="font-small">List <span class="line-through ">$@product.OriginalPrice</span></p>
+                </div>
+            }
+            else
+            {
+                <div class="col-xs-3">
+                    <p>$@product.CurrentPrice</p>
+                </div>
+            }
+            <div class="col-xs-3">Rating: @product.Rating</div>
+        </div>
+    </a>
+    }
+}

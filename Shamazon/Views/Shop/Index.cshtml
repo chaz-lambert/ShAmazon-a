@@ -16,24 +16,28 @@ else
 {
     foreach (var product in Model)
     {
+    <hr />
     <a href="/Shop/Product/@product.Id">
-        <div class="row well">
-            <div class="col-xs-3">@product.Name</div>
-            <div class="col-xs-3">By @product.SellerName</div>
-            @if (product.OriginalPrice != 0 && product.CurrentPrice < product.OriginalPrice)
-            {
-                <div class="col-xs-3">
-                    <p>$@product.CurrentPrice</p>
-                    <p class="font-small">List <span class="line-through ">$@product.OriginalPrice</span></p>
+        <div class="row">
+            <div class="col-xs-3">[IMAGE]</div>
+            <div class="col-xs-6">
+                <div class="row">
+                    <p>@product.Name</p>
+                    <p class="text-muted font-small">By @product.SellerName</p>
+                    @if (product.OriginalPrice != 0 && product.CurrentPrice < product.OriginalPrice)
+                    {
+                        <p>$@product.CurrentPrice</p>
+                        <p class="font-small">List <span class="line-through ">$@product.OriginalPrice</span></p>
+                    }
+                    else
+                    {
+                        <p>$@product.CurrentPrice</p>
+                    }
                 </div>
-            }
-            else
-            {
-                <div class="col-xs-3">
-                    <p>$@product.CurrentPrice</p>
-                </div>
-            }
-            <div class="col-xs-3">Rating: @product.Rating</div>
+            </div>
+            <div class="col-xs-3">
+                Rating: @product.Rating
+            </div>
         </div>
     </a>
     }
