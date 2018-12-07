@@ -8,11 +8,24 @@
 }
 
 <h2>@Model.Name</h2>
+    <div class="card-group">
+        <div class="">
+            <div class="card-body">
+                <p class="">@Model.Description</p>
+                @if (Model.OriginalPrice != 0 && Model.CurrentPrice < Model.OriginalPrice)
+                {
+                    <p>New Price! $@Model.CurrentPrice</p>
+                    <p class="">List <span class="line-through ">$@Model.OriginalPrice</span></p>
+                }
+                else
+                {
+                    <p>$@Model.CurrentPrice</p>
+                }
+                <p class="card-text"><small class="text-muted">Rating: @Model.Rating</small></p>
+                <a class="btn btn-default" href="/Shop/AddToCart/@Model.Id">Add to cart</a>
 
-<ul>
-    <li>Current Price: @Model.CurrentPrice</li>
-    <li>Original Price: @Model.OriginalPrice</li>
-    <li>Rating: @Model.Rating</li>
-</ul>
-<a class="btn btn-default" href="/Shop/AddToCart/@Model.Id">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</div>
 

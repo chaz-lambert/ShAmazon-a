@@ -11,7 +11,7 @@
     </li>
     <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
 
-    <li>@Html.ActionLink("Cart", "Cart", "Home", routeValues: null, htmlAttributes: new { id = "cartLink" })</li>
+    <li>@Html.ActionLink("Shopping Cart", "ShoppingCart", "Shop", routeValues: null, htmlAttributes: new { id = "cartLink" })</li>
 
 
 </ul>
@@ -24,8 +24,5 @@ else
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-
-        <li>@Html.ActionLink("Cart", "Cart", "Home", routeValues: null, htmlAttributes: new { id = "cartLink" })</li>
-
     </ul>
 }

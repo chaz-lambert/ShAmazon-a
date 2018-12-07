@@ -264,9 +264,14 @@
     <Compile Include="Migrations\201812052309467_IntialDBsetup.Designer.cs">
       <DependentUpon>201812052309467_IntialDBsetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812060101242_ShoppingCart_take1.cs" />
+    <Compile Include="Migrations\201812060101242_ShoppingCart_take1.Designer.cs">
+      <DependentUpon>201812060101242_ShoppingCart_take1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\ShoppingCartItem.cs" />
     <Compile Include="Models\Transactions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -380,7 +385,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Shop\Index_.cshtml" />
+    <Content Include="Views\Shop\ShoppingCart.cshtml" />
     <Content Include="Views\Shop\Productold.cshtml" />
     <Content Include="Views\Product\Add.cshtml" />
     <Content Include="Views\Manage\StartSelling.cshtml" />
@@ -452,6 +457,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812052309467_IntialDBsetup.resx">
       <DependentUpon>201812052309467_IntialDBsetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812060101242_ShoppingCart_take1.resx">
+      <DependentUpon>201812060101242_ShoppingCart_take1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

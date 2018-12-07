@@ -26,6 +26,7 @@ namespace Shamazon.Models
     {
         public DbSet<Product> Products{ get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
