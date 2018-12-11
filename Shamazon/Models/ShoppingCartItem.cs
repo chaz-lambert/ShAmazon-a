@@ -17,3 +17,5 @@ namespace Shamazon.Models
         public Product Product { get; set; }
     }
 }
+
+
